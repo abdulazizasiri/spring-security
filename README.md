@@ -55,9 +55,47 @@ It has the following:
 
 
 
-### Video 2
+### Video 2 Application Security key words
 
 
+1- Authentication: this is asking who are you? This requires providing some identification that proves who you are. 
+
+- In the application level, this maybe something like: username and password which get checked by the system that proves ur identity. 
+
+
+This is called "Konweledge Based authentication"
+
+Addvanteges: It is simple
+
+
+Dis: Not very safe. 
+
+
+Solution: We incoporate a possession based authentication
+
+
+Which test if you are in possession of something that receives a token or a code that test if you  really have it. 
+
+
+This is called Multi-factor auth
+
+
+2- Authorization
+
+Authrization asks, Can this user do this? Yes/No 
+
+
+
+3- Principal 
+
+
+The principal is the currentlyy logged in user. 
+
+
+4- Roles 
+
+
+A role is a group of authorities 
 
 
 
