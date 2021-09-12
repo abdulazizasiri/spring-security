@@ -38,10 +38,24 @@ It has the following:
 
 
 
+- Things we can do in Spring security
+
+
+1- Username and passoword authentication
+
+2- SSO/ OOkta/LDAP 
+
+3- It adds App level authorization
+
+4- Intra App Authorization like OAuth 
+
+5- It allows to create microserevice security (using token and JWT)
+
+6- It adds method level security (this is a way to secure methods , objects in my code)
 
 
 
-
+### Video 2
 
 
 
