@@ -92,11 +92,18 @@ Authrization asks, Can this user do this? Yes/No
 The principal is the currentlyy logged in user. 
 
 
-4- Roles 
+4- Granted Authorities: 
+
+
+
+5- Roles 
 
 
 A role is a group of authorities 
 
+
+
+### Filters 
 
 
 - Content taken from Java Brains: https://www.youtube.com/watch?v=sm-8qfMWEV8&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE
