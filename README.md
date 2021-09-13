@@ -106,6 +106,15 @@ A role is a group of authorities
 ### Filters 
 
 
+
+### 4 Authentication and Configuration of AuthenticationManager
+
+
+### 5: Authorizattion
+
+By default all API endpoints need authentication in a Spring Security App.
+
 - Content taken from Java Brains: https://www.youtube.com/watch?v=sm-8qfMWEV8&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE
 
 
+git merge --abort
