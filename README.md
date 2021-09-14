@@ -205,6 +205,12 @@ In the above method we are giving the endpoint permission based on the user role
 ### Hoe does Spring Security Authentication work.
 
 
+- One thing that is important to remember is that Spring Security module is not invokable. 
+
+Once it is added to the project it adds something called a <code> Filter </code> which intercept all incoming request to the system and applies the spring auth to the request. 
+
+- Filters: These are construct in the servlet application that let us intercept requests. 
+
 
 
 - Content taken from Java Brains: https://www.youtube.com/watch?v=sm-8qfMWEV8&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE
