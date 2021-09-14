@@ -14,7 +14,7 @@ public class HomeController{
 
     @GetMapping("/admin")
     public String admineHome(){
-        return ("<h1> Admin People</h1>");
+        return "LoginPage";
     }
 
 
