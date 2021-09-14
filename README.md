@@ -128,6 +128,85 @@ API                 Roles allows to access it
 
 
 
+- In the class we created that inherite from <code>WebSecurityConfigurerAdapter </code>
+
+
+### There are two methods that we need to override
+
+- First
+
+```java
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        // We need to tell it the type of the auth
+
+
+
+    }
+
+
+```
+
+
+And then we specify the type of of the authentication and the users with their own roles.
+
+
+
+```java
+
+protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+      auth.inMemoryAuthentication()
+                .withUser("blah")
+                .password("blah")
+                .roles("USER")
+                .and()
+                .withUser("foo")
+                .password("foo")
+                .roles("ADMIN");
+
+
+}
+
+```
+
+
+- Remeber, there is an important bean that does password encoding. We have  to create a method that specifies the type of encoding.
+
+```java
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        return NoOpPasswordEncoder.getInstance();
+    }
+
+```
+
+- We have another overloaded <Code> configure </code> method that is responsible for giving the permission for users which takes <code> HttpSecurity </code> 
+
+
+```java 
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        System.out.println("Hello Security");
+        http.authorizeRequests()
+                .antMatchers("/", "static/css", "static/js").permitAll()
+                .antMatchers("/admin").hasRole("ADMIN")
+                .antMatchers("/user").hasAnyRole("USER","ADMIN")
+                .antMatchers("/").permitAll()
+                .and().formLogin();
+    }
+
+
+
+```
+
+In the above method we are giving the endpoint permission based on the user role. 
+
+
+### Hoe does Spring Security Authentication work.
+
+
+
+
 - Content taken from Java Brains: https://www.youtube.com/watch?v=sm-8qfMWEV8&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE
 
 
