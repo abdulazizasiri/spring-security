@@ -1,6 +1,7 @@
 package com.spring_security.SpringSecurity;
 
 
+import org.springframework.boot.autoconfigure.neo4j.Neo4jProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -28,6 +29,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .withUser("foo")
                 .password("foo")
                 .roles("ADMIN");
+
     }
     @Bean
     public PasswordEncoder passwordEncoder(){
