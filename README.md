@@ -114,6 +114,20 @@ A role is a group of authorities
 
 By default all API endpoints need authentication in a Spring Security App.
 
+- We are going to make three API endpoints
+
+API                 Roles allows to access it
+
+/                       All (Unauthenticated)
+
+
+/user                   USER and ADMIN roles
+
+
+/admin                  ADMIN role
+
+
+
 - Content taken from Java Brains: https://www.youtube.com/watch?v=sm-8qfMWEV8&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE
 
 
