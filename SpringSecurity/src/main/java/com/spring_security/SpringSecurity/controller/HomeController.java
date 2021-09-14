@@ -11,4 +11,16 @@ public class HomeController{
     public String hello(){
         return ("<h1> Welcome </h1>");
     }
+
+    @GetMapping("/admin")
+    public String admineHome(){
+        return ("<h1> Admin People</h1>");
+    }
+
+
+    @GetMapping("/user")
+    public String userHome(){
+        return ("<h1> Normal User People</h1>");
+    }
+
 }
