@@ -20,7 +20,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         // We need to set our configuration  to our auth objeect passed
 
         // What kind of configuration we can do her
-
+//        auth.authenticationProvider() // Takes a service
         auth.inMemoryAuthentication()
                 .withUser("blah")
                 .password("blah")
