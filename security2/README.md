@@ -97,3 +97,9 @@ IF you want to add spring security first we need to add a dependency
 
 <code> spring-boot-starter-security </code>
 
+
+- Filters: 
+
+- After adding it, we would have to configure our application manually
+
+There few classes that we have to implement 
