@@ -185,4 +185,6 @@ We can include <code>unblundid </code> to create a simple server.
 
 The server created a session table for every user and then the clinet sends the session saved in the cookie and the the server verifies it. 
 
+### JWT
 
+JWT is not a token, it is a JSON object that has the data and something veryy important which is the  <code> signature</code>
