@@ -152,4 +152,12 @@ LDAP is a Lightweight Directory Access Protocol.
 
 It is used to access and maintain distributed directory information services over an internet protocol.
 
-- LDAP can be used for anytype of hierarchical directoy information, but it is very common to use is to store<code> organizational information </code> 
+- LDAP can be used for anytype of hierarchical directoy information, but it is very common to use is to store<code> organizational information </code> a typical organization has  departments, managers, people reporting to other people, 
+
+
+- Creating LDAP server
+
+
+We can include <code>unblundid </code> to create a simple server.
+
+
