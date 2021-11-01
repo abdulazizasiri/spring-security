@@ -188,3 +188,22 @@ The server created a session table for every user and then the clinet sends the 
 ### JWT
 
 JWT is not a token, it is a JSON object that has the data and something veryy important which is the  <code> signature</code>
+
+### The structures of JWT
+
+JWT in essence is a JSON token. 
+
+
+JWT consists og three parts
+
+1- Header: contains two parts
+
+    1- The type of the token JWT
+
+    2- and the algorithm being used such as HMAC and SHA256 or RSA
+
+2- Payload: Main parts which holds the data.
+
+3- Signature: The signature is used for the server to check if the header and the payload is correct. 
+
+Each part is written and seperated by periods. 
