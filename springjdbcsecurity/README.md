@@ -161,3 +161,28 @@ It is used to access and maintain distributed directory information services ove
 We can include <code>unblundid </code> to create a simple server.
 
 
+
+### Number 4: JWT
+
+- JWT: JSON WEB TOKEN. JWt is also has become very popular in the microservices architecture. 
+
+- JWT is used to manage authorization.
+
+- There is a standarezation that tells how JWT should be structurued which is called <code> RFC 7519</code>
+
+
+- JWT focus on authorization. 
+
+## Are there are options tha thandles JWT?
+
+- JWT
+
+- Session tokens
+
+-
+### Session Tokens 
+
+
+The server created a session table for every user and then the clinet sends the session saved in the cookie and the the server verifies it. 
+
+
