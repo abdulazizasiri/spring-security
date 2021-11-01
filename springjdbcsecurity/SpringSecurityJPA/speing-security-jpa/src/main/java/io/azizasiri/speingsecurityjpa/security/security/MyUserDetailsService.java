@@ -20,8 +20,9 @@ public class MyUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
 
 //        System.out.println("user passed is "+userName);
+        System.out.println("Database access started");
         Optional<User> user = this.userRepository.findByUserName(userName); // The username we used to authenticate
         user.orElseThrow(() -> new UsernameNotFoundException("User not Found "+userName));
-        return user.map(MyUserDetails::new).get();
+        return user.map(MyUserDetails::new).get(); // Understand
     }
 }

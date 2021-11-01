@@ -16,6 +16,7 @@ public class MyUserDetails implements UserDetails {
     private List<GrantedAuthority> authorities;
 
     public MyUserDetails(User user) {
+        System.out.println("Constructor was called");
         this.userName = user.getUserName();
         this.password = user.getPassword();
         this.active = user.isActive();
