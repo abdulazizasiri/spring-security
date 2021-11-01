@@ -19,8 +19,24 @@ public class Securityconfiguration  extends WebSecurityConfigurerAdapter {
     auth.inMemoryAuthentication()
       .withUser("blah")
       .password("blah")
-      .roles("USER");
+      .roles("USER")
+      .and()
+      .withUser("foo")
+      .password("foo")
+      .roles("ADMIN");
   }
+
+  @Override
+  protected void configure(HttpSecurity http) throws Exception {
+//    super.configure(http);
+    http.authorizeRequests()
+      .antMatchers("/admin").hasRole("ADMIN")
+      .antMatchers("/user").hasAnyRole("USER", "ADMIN")
+      .antMatchers("/").hasAnyRole()
+      .and().formLogin();
+
+  }
+
   @Bean
   public PasswordEncoder getPasswordEncoder() {
     System.out.println("Passsword encoder");
