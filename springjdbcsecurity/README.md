@@ -201,3 +201,32 @@ JWT is not a token, it is a JSON object that has the data and something veryy im
 
 ### Spring boot + Spring Security
 
+- Create a new authentication API endpoint
+
+- Examine every incoming request for valid JWT and authorize. 
+
+
+- install 2 dependencies 
+
+
+```xml
+
+<dependency>
+	<groupId>io.jsonwebtoken</groupId>
+		<artifactId>jjwt-api</artifactId>
+		<version>0.10.1</version>
+</dependency>
+
+```
+
+```xml
+
+<dependency>
+	<groupId>javax.xml.bind</groupId>
+	<artifactId>jaxb-api-parent</artifactId>
+	<version>2.3.1</version>
+</dependency>
+
+```
+
+
