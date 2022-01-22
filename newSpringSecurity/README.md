@@ -35,4 +35,15 @@ Authentication - Who you are?
 
 Authorization: Can you do what you asked to be doing? 
 
+- What is a principal in Spring? 
 
+A person a system idetified in the process of authentication in other words is the "currently logged in user" 
+
+- Authority vs Priviliges vs Role? 
+
+- Role: It is a group of authority that are assigned together
+
+#### Filters  Video 3
+
+
+ 
