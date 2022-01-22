@@ -185,25 +185,49 @@ We can include <code>unblundid </code> to create a simple server.
 
 The server created a session table for every user and then the clinet sends the session saved in the cookie and the the server verifies it. 
 
+
 ### JWT
 
 JWT is not a token, it is a JSON object that has the data and something veryy important which is the  <code> signature</code>
 
-### The structures of JWT
+- what are the difference between <code>Session token</code><code>JWT</code>
 
-JWT in essence is a JSON token. 
+- Session tokens are reference tokens. 
+
+- JWT  tokens are value tokens. 
+
+- Get it from my PC. 
 
 
-JWT consists og three parts
+### Spring boot + Spring Security
 
-1- Header: contains two parts
+- Create a new authentication API endpoint
 
-    1- The type of the token JWT
+- Examine every incoming request for valid JWT and authorize. 
 
-    2- and the algorithm being used such as HMAC and SHA256 or RSA
 
-2- Payload: Main parts which holds the data.
+- install 2 dependencies 
 
-3- Signature: The signature is used for the server to check if the header and the payload is correct. 
 
-Each part is written and seperated by periods. 
+```xml
+
+<dependency>
+	<groupId>io.jsonwebtoken</groupId>
+		<artifactId>jjwt-api</artifactId>
+		<version>0.10.1</version>
+</dependency>
+
+```
+
+
+```xml
+
+<dependency>
+	<groupId>javax.xml.bind</groupId>
+	<artifactId>jaxb-api-parent</artifactId>
+	<version>2.3.1</version>
+</dependency>
+
+```
+
+
