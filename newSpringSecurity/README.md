@@ -45,5 +45,13 @@ A person a system idetified in the process of authentication in other words is t
 
 #### Filters  Video 3
 
+Filters in Spring is a layer inside the web app that intercept every http request that goes into the controller or back to the client. 
 
- 
+Spring security by defaulta adds the following 
+
+- Adds mandatory authentication for URLs
+
+
+- Adds a login form
+
+- Handles login error
