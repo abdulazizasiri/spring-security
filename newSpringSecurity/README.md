@@ -113,3 +113,28 @@ Spring security by defaulta adds the following
 
 ## Configure Authorization Video 5
 
+### API                         ROLES allows to access it
+
+1- /                             Accessible by everyone 
+
+
+2- /user                        USER and ADMIN roles
+
+
+3- /admin                       ADMIN role
+
+
+- Implement the configure (HttpSecurity name) method
+
+
+NOTE: 
+
+1- configure (AuthenticationManagerBuilder name)  used for authentication. 
+
+2- configure (HttpSecurity name)  used for authorization
+
+
+### How Spring Security works? 
+
+- AuthenticationProviders
+
