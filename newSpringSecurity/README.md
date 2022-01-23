@@ -55,3 +55,61 @@ Spring security by defaulta adds the following
 - Adds a login form
 
 - Handles login error
+
+## Spring Security Configuration Video 4
+
+
+- The way we configure spring security is by affecting the <code> AuthenticationManager</code>
+
+
+- You can imagain an <code> AuthenticationManager</code> setting inside a spring security app. 
+
+
+- Note: We do not work with the  <code> AuthenticationManager</code> directly, instead,  <code> AuthenticationManagerBuilder</code>
+
+
+- What do we use  <code> AuthenticationManagerBuilder</code> for?
+
+
+    1- Get aa hold of AuthenticationManagerBuider
+
+    2- Set the configuration on it. 
+
+    3- The AuthenticationManagerBuider start asking us few quesstions. 
+
+        A- AMB: What type of authentication do you need? 
+        - Me: in memory for example
+        B- AMB: What is the username, password and the role of the user? 
+        - Me: username: , pass: , and role: 
+
+        Then,  an AuthenticationManager gets created :)
+
+    
+- How do we get a hold of the AuthenticationMAnagerBuilder? 
+
+    In spring security app, there is a class that sets there which has a method called <code>configure (AuthenticationManagerBuilder) </code>
+
+    - Note: We need to extend this class and override the configure method. 
+
+
+
+### Steps 
+
+1- Create a configuration package 
+
+2- Create a configuration class for security. You can name it anything you wish
+
+3- <code> extends WebSecurityConfigurerAdapter</code>  class
+
+4- Override some methods to create an  AuthenticationManager. 
+
+5- We need to override: 
+
+    1- configure (AuthenticationManager auth)
+
+
+6- We need to make this class annotated with 
+<code>@EnableSecurity </code>
+
+## Configure Authorization Video 5
+
