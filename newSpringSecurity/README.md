@@ -136,5 +136,15 @@ NOTE:
 
 ### How Spring Security works? 
 
-- AuthenticationProviders
+- AuthenticationProviders: It is the thing that does the authentication. 
+
+
+
+### Spring JDBC authentication 
+
+
+
+
+
+
 
