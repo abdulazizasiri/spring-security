@@ -143,6 +143,77 @@ NOTE:
 ### Spring JDBC authentication 
 
 
+-  We need to create the datasource
+
+- Let spring access it and use the default schema
+
+
+
+## Mysql + JPA authentication 
+
+Will fill it out later
+
+## LDAP 
+
+Skipped 
+
+
+### What is JWT authorization really about? 
+
+There are multiple ways to do authorizations (Authorization strategies)
+
+- Session token - Reference token (check the session id in the server)
+
+- JSON Web Token (JWT) value token
+
+The idea is that when we get authenticated, the server creates a session id. In the client side, this session id gets stored in a cookie. 
+
+
+This approach has been working fine for quit some time, but it has some issues. 
+
+
+1- We might have more than one server (load balancer distrbuting the routes), in this case, we need to stored our session id in all of them. it is tedious 
+
+2- 
+
+### JWT Structure 
+
+There are three parts in the JWT token ordered as follows: 
+
+1- Header
+
+2- Payload: holds information. 
+
+3- Signature
+
+- When someone gets authenticated to  a system (userName, Password), then the server checks these info, and if the user exist,  the server
+
+1- Create a JWT with the name of the user
+
+2- The server then sends back the JWT to the user. 
+
+3- The user then saves it to some sort of a storage 
+
+    - Client side localstorage 
+    - Cookie
+
+
+4- the user has to use it in every subsequent request.
+This happens in the HTTP header. 
+
+- Note: HTTP header is a key value pair. 
+    
+    Authorization:
+                    Bearer: JWT
+
+5- The server then validatees this value in the header
+
+- How it does that is by: it does base64 for the header + payload
+then, compute the  signature after that it compares it with the original signature. 
+
+
+        
+
 
 
 
