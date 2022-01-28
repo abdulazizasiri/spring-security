@@ -212,10 +212,70 @@ This happens in the HTTP header.
 then, compute the  signature after that it compares it with the original signature. 
 
 
-        
+
+- So, How secure is a JWT  if it is readable by anyone? 
+
+Note: We don't store confedential / sensitive information in a JWT. 
+
+- We need to store just enough information for the server to know who the user is. 
+
+
+- What if someone steals my JWT and uses it themselves? 
+
+
+- YEs they can, so you have to be careful how you are transmitting JWt. It has to be send using an HTTPS protocol. 
+
+- One of the most common ways to use JWT is using the process of OAuth
+
+
+- How do you disable a JWT? 
+
+
+### How do we create a JWT authorization in SpringSecurity from Scratch. 
+
+
+- Objectives
+
+
+1- Create a new authentication API endpoint
+
+2- Examine every incoming request for valid JWT and authorize
 
 
 
 
 
 
+### OAuth 2
+
+What is OAuth? 
+
+Auth is referring to "Authoerization" and not "Authentication".
+
+It is used for authorization between services. 
+
+- OAuth terminology
+
+1- Resource: It is the protected resource. 
+
+
+2- Resource owner: An entity  capable of granting access to a protected resource. (The guy who wants to access google drive to get image printed)
+
+
+3- Resource server: The server hosting the protected resource. (Google Drive)
+
+
+4- Client ( PHoto printing service). An Application making protected resource requests on behalf of the resource owner and with its authorization
+
+
+5- Authorization Server: The server issuing access tokens to the client. 
+
+
+- Google drive has the burden of security in this case. 
+
+- Google drive has an authorization server coupled with it. 
+
+
+## Authorization Flow 
+
+1- 
